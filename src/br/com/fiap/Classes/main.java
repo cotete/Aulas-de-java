@@ -5,18 +5,24 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         FolhaDePagamento fp = new FolhaDePagamento();
+        double salarioBruto, descontoINSS, valorPlanoDeSaude;
+        int numeroDeDependentes;
         Scanner sc;
     try{
         sc = new Scanner(System.in);
         System.out.println("Digite a porcentagem do desconto de INSS: ");
-        fp.descontoINSS = sc.nextInt();
+        descontoINSS = sc.nextInt();
         System.out.println("Digite o seu salario bruto: ");
-        fp.salarioBruto = sc.nextDouble();
+        salarioBruto = sc.nextDouble();
         System.out.println("Digite o numero de dependentes: ");
-        fp.nDeDependentes = sc.nextInt();
+        numeroDeDependentes = sc.nextInt();
         System.out.println("Digite o valor do plano de saude: ");
-        fp.valorPlanoDeSaude = sc.nextDouble();
+        valorPlanoDeSaude = sc.nextDouble();
 
+        fp.descontoINSS = descontoINSS;
+        fp.nDeDependentes = numeroDeDependentes;
+        fp.valorPlanoDeSaude = valorPlanoDeSaude;
+        fp.salarioBruto = salarioBruto;
 
         double salarioLiquido = fp.calcularSalarioLiquido();
 

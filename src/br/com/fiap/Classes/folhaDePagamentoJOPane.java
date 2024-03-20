@@ -7,12 +7,18 @@ public class folhaDePagamentoJOPane {
 
 
         FolhaDePagamento fdp = new FolhaDePagamento();
+        double salarioBruto, descontoINSS, valorPlanoDeSaude;
+        int numeroDeDependentes;
 
         try {
-            fdp.salarioBruto = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do seu salario bruto: "));
-            fdp.descontoINSS = Integer.parseInt(JOptionPane.showInputDialog("Digite o desconto do INSS: "));
-            fdp.nDeDependentes = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero de dependentes "));
-            fdp.valorPlanoDeSaude = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do plano de saude: "));
+            salarioBruto = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do seu salario bruto: "));
+            descontoINSS = Integer.parseInt(JOptionPane.showInputDialog("Digite o desconto do INSS: "));
+            numeroDeDependentes = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero de dependentes "));
+            valorPlanoDeSaude = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do plano de saude: "));
+            fdp.valorPlanoDeSaude = valorPlanoDeSaude;
+            fdp.nDeDependentes = numeroDeDependentes;
+            fdp.salarioBruto = salarioBruto;
+            fdp.descontoINSS = descontoINSS;
 
             double salarioLiquido = fdp.calcularSalarioLiquido();
 
