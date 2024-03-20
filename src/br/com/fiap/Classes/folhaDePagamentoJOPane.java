@@ -19,7 +19,7 @@ public class folhaDePagamentoJOPane {
             JOptionPane.showMessageDialog(null, "O seu salario liquido e de: " + salarioLiquido);
 
         } catch (Exception e) {
-            System.out.println("Voce errou algo ai veionho melhore");
+            JOptionPane.showMessageDialog(null, "Voce errou algo ai veionho melhore");
         }
 
     }
