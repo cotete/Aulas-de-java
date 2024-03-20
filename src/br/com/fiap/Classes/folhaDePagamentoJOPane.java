@@ -6,10 +6,9 @@ public class folhaDePagamentoJOPane {
     public static void main(String[] args) {
 
 
-        FolhaDePagamento fdp;
+        FolhaDePagamento fdp = new FolhaDePagamento();
 
         try {
-            fdp = new FolhaDePagamento();
             fdp.salarioBruto = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do seu salario bruto: "));
             fdp.descontoINSS = Integer.parseInt(JOptionPane.showInputDialog("Digite o desconto do INSS: "));
             fdp.nDeDependentes = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero de dependentes "));
