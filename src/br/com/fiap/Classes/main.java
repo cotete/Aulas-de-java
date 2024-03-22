@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        FolhaDePagamento fp = new FolhaDePagamento();
+        FolhaDePagamento fp;
         double salarioBruto, descontoINSS, valorPlanoDeSaude;
         int numeroDeDependentes;
         Scanner sc;
     try{
+        fp = new FolhaDePagamento();
         sc = new Scanner(System.in);
+
         System.out.println("Digite a porcentagem do desconto de INSS: ");
         descontoINSS = sc.nextInt();
         System.out.println("Digite o seu salario bruto: ");
@@ -19,14 +21,16 @@ public class main {
         System.out.println("Digite o valor do plano de saude: ");
         valorPlanoDeSaude = sc.nextDouble();
 
+
         fp.descontoINSS = descontoINSS;
         fp.nDeDependentes = numeroDeDependentes;
         fp.valorPlanoDeSaude = valorPlanoDeSaude;
         fp.salarioBruto = salarioBruto;
 
-        double salarioLiquido = fp.calcularSalarioLiquido();
+        double x = fp.calcularPlanoDeSaude();
 
-        System.out.println("O seu salario liquido e: " + salarioLiquido);
+        fp.calcularSalarioLiquido();
+        System.out.println(x);
     }catch (Exception e){
         System.out.println("Tu digito errado ai irmaozinho vamo ta melhorando imundo.");
     }

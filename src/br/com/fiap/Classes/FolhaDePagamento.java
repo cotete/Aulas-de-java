@@ -6,9 +6,14 @@ public class FolhaDePagamento {
     public double descontoINSS;
     public double valorPlanoDeSaude;
 
-    public double calcularSalarioLiquido(){
-        double salarioLiquido = salarioBruto - ((valorPlanoDeSaude * (nDeDependentes+1)) + (salarioBruto * descontoINSS/100));
-        return salarioLiquido;
+    public double calcularPlanoDeSaude(){
+        double valorPlano = (valorPlanoDeSaude*(nDeDependentes+1));
+        return valorPlano;
+    }
+
+    public void calcularSalarioLiquido(){
+        double salarioLiquido = salarioBruto - (calcularPlanoDeSaude() + (salarioBruto * descontoINSS/100));
+        System.out.println(salarioLiquido);
     }
 
 }

@@ -11,8 +11,8 @@ public class Radio {
         volume--;
     }
 
-    public void trocarEstacao (float estacao){
-        this.estacao = estacao;
+    public void trocarEstacao (float e){
+        estacao = e;
     }
 
     public void mostrar(){
